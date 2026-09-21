@@ -108,7 +108,6 @@ body{--guten-base-color:#181d23;--guten-base-lighter-color:#2d3137;--guten-bg-co
 <link rel="canonical" href="https://klstudio.design/privacy/" />
 <meta name="description" content="KL STUDIO Получить консультацию Home Privacy ПРИВАТНОСТь клиентов Ознакомиться с политикой ПоЛИТИКА В ОБЛАСТИ СБОРА И ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ 1. Общие положения Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. № 152-ФЗ «О персональных данных» (далее — Закон о персональных данных) и определяет порядок обработки персональных данных и меры&hellip;" />
 
-<!-- Jetpack Open Graph Tags -->
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Приватность" />
 <meta property="og:url" content="https://klstudio.design/privacy/" />
@@ -125,52 +124,18 @@ body{--guten-base-color:#181d23;--guten-base-lighter-color:#2d3137;--guten-bg-co
 <meta name="twitter:image" content="https://klstudio.design/wp-content/uploads/2024/10/bedroom.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 
-<!-- End Jetpack Open Graph Tags -->
 <link rel="icon" href="../wp-content/uploads/2024/10/cropped-clue-svgrepo-com.png" sizes="32x32" />
 <link rel="icon" href="../wp-content/uploads/2024/10/cropped-clue-svgrepo-com.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../wp-content/uploads/2024/10/cropped-clue-svgrepo-com.png" />
 <meta name="msapplication-TileImage" content="../wp-content/uploads/2024/10/cropped-clue-svgrepo-com.png" />
 <style id="policy-text-flow-inline-css">
-/*
- * Текст политики: каждый абзац и заголовок с новой строки.
- *
- * Обёртка колонки .guten-column-wrapper у Gutenverse — это flex-контейнер
- * с flex-wrap:wrap, а абзацы и заголовки внутри — flex-элементы с
- * flex:0 1 auto, то есть шириной по содержимому. Длинные абзацы занимали
- * строку целиком и выглядели нормально, а короткие вставали парами: заголовок
- * «3. Основные права и обязанности Оператора» оказывался на одной строке с
- * «3.1. Оператор имеет право:», а «3.2. Оператор обязан:» — слипался со
- * следующим пунктом списка. На ширине 1440px таких пар было пять, и набор
- * менялся вместе с шириной окна.
- *
- * Задаём элементам flex-basis:100%, чтобы каждый занимал свою строку.
- * Сам flex-контейнер не трогаем: он отвечает ещё и за выравнивание колонки.
- *
- * Баг воспроизводится на исходном klstudio.design.
- */
 .guten-column.guten-GaixCV>.guten-column-wrapper>*{
 	flex-basis:100%;
 	max-width:100%;
 }
 </style>
 <style id="footer-layout-inline-css">
-/*
- * Подвал: одна сетка на обеих страницах.
- *
- * В выгрузке подвал на главной и на /privacy настроен по-разному: у секции
- * с колонками на главной padding:0 10px и ширины колонок 54.5%/45.5%, а на
- * /privacy — margin:0 20%, ширины 60.2%/39.79% и ещё margin-left:20% с
- * padding-left:30% у обёртки «Ссылок». Отсюда разное положение колонок.
- * Вдобавок ни один элемент подвала не попадал в сетку страницы: бренд шёл
- * блоком 1140px по центру, разделитель — во всю ширину экрана, а нижняя
- * строка — блоком 1120px, смещённым влево.
- *
- * Приводим весь подвал к тому же контейнеру 1440px с отступами 26px, что и
- * остальная страница: бренд и слоган по центру, пара колонок по центру,
- * разделитель во всю ширину коробки, нижняя строка — по её краям.
- */
 
-/* Коробка подвала — та же, что у всей страницы. */
 .guten-section.guten-pNVlHp>.guten-container{
 	box-sizing:border-box;
 	max-width:1440px;
@@ -180,7 +145,6 @@ body{--guten-base-color:#181d23;--guten-base-lighter-color:#2d3137;--guten-bg-co
 	padding-right:26px;
 }
 
-/* Бренд и слоган — по центру коробки. */
 .guten-column.guten-8peAeb>.guten-column-wrapper{
 	padding-left:0;
 	padding-right:0;
@@ -189,23 +153,16 @@ body{--guten-base-color:#181d23;--guten-base-lighter-color:#2d3137;--guten-bg-co
 	width:100%!important;
 	justify-content:center;
 }
-/* На /privacy бренд в подвале был 18px против 32px на главной. */
 .guten-hMXz41 h2{
 	font-size:32px;
 	line-height:1.2;
 }
 
-/* Колонки «Навигация» и «Ссылки» — центрированной парой. */
-/* Секция колонок и её обёртка — flex-элементы, схлопывавшиеся по
-   содержимому, из-за чего пара колонок вставала не по центру коробки.
-   Растягиваем обе на всю ширину. */
 .section-wrapper[data-id="HRDoHq"],
 .guten-inner-wrap:has(>.section-wrapper[data-id="HRDoHq"]){
 	flex:0 0 100%;
 	width:100%;
 }
-/* На главной эта обёртка вдобавок имеет несимметричный отступ
-   (96px слева против 80px справа) — отсюда сдвиг пары колонок на 8px. */
 .guten-wrap-helper:has(>.guten-inner-wrap>.section-wrapper[data-id="HRDoHq"]){
 	padding-left:0;
 	padding-right:0;
@@ -225,8 +182,6 @@ body{--guten-base-color:#181d23;--guten-base-lighter-color:#2d3137;--guten-bg-co
 	column-gap:120px;
 	row-gap:32px;
 }
-/* Колонки одинаковой ширины — иначе пара выглядит смещённой: у «Ссылок»
-   колонка шире своего текста, и оптический центр уезжает влево. */
 .guten-column.guten-eTjnSA,
 .guten-column.guten-6HCAEZ{
 	width:260px!important;
@@ -242,13 +197,11 @@ body{--guten-base-color:#181d23;--guten-base-lighter-color:#2d3137;--guten-bg-co
 	padding-right:0;
 }
 
-/* Разделитель — во всю ширину коробки. */
 .guten-column.guten-esIqOK>.guten-column-wrapper{
 	padding-left:0;
 	padding-right:0;
 }
 
-/* Нижняя строка — по краям той же коробки. */
 .guten-column.guten-DO7JRC>.guten-column-wrapper{
 	padding-left:0;
 	padding-right:0;
@@ -265,15 +218,12 @@ body{--guten-base-color:#181d23;--guten-base-lighter-color:#2d3137;--guten-bg-co
 	column-gap:24px;
 	row-gap:8px;
 }
-/* У обоих блоков нижней строки задано width:100%!important — перебиваем,
-   чтобы каждый занял свою ширину и разошёлся по краям коробки. */
 .guten-JBeHT0>.guten-inner-wrap>*{
 	flex:0 0 auto!important;
 	width:auto!important;
 	max-width:100%;
 }
 
-/* На узких экранах подвал целиком по центру. */
 @media (max-width:767px){
 	.guten-section.guten-HRDoHq>.guten-container{
 		column-gap:0;
@@ -285,43 +235,16 @@ body{--guten-base-color:#181d23;--guten-base-lighter-color:#2d3137;--guten-bg-co
 }
 </style>
 <style id="page-grid-inline-css">
-/*
- * Сетка страницы — как на главной.
- *
- * На /privacy шапка, первый экран и колонка с текстом лежали в контейнерах
- * шириной 1600px, тогда как на главной те же секции ограничены 1440px. Из-за
- * этого логотип и текст на двух страницах стояли на разном расстоянии от
- * края, а подвал (1440px) не совпадал с собственной шапкой страницы.
- */
 .guten-section.guten-pjtooW>.guten-container,
 .guten-section.guten-Ui6TSA>.guten-container,
 .guten-section.guten-IEs1C4>.guten-container{
 	max-width:1440px;
 }
-/* У обёртки логотипа здесь дополнительные margin-left:8px и margin-top:8px,
-   которых нет на главной: из-за них логотип стоял правее и ниже. */
 .guten-column.guten-KITuQI>.guten-column-wrapper{
 	margin:0;
 }
 </style>
 <style id="page-gutter-inline-css">
-/*
- * Боковые поля страницы и общая шапка.
- *
- * 1. Контейнеры страницы ограничены 1440px, а собственный отступ внутри них
- *    всего 26px. Пока окно шире 1440px запас растёт, но на ширинах примерно
- *    от 1100 до 1500px поля схлопываются до 26–42px, и «Получить
- *    консультацию» в шапке упирается в правый край. Ограничиваем контейнеры
- *    ещё и по доле окна, чтобы с каждой стороны всегда оставалось минимум
- *    48px. Правило одинаковое для всех секций, поэтому общая сетка, по
- *    которой выровнены шапка, первый экран, блок с фото и подвал, не
- *    разъезжается.
- *
- * 2. Шапка приводится к одному виду на обеих страницах и на всех ширинах.
- *
- * 3. На экранах уже 768px логотип 36px занимает половину строки и рискует
- *    разорваться на две. Уменьшаем его и запрещаем перенос.
- */
 @media (min-width:1025px){
 	.guten-section.guten-pjtooW>.guten-container,
 	.guten-section.guten-F0SZdV>.guten-container,
@@ -335,26 +258,9 @@ body{--guten-base-color:#181d23;--guten-base-lighter-color:#2d3137;--guten-bg-co
 	}
 }
 
-/*
- * Шапка: логотип слева, «Получить консультацию» справа, по верхнему краю букв.
- *
- * В выгрузке шапки двух страниц расходились: ширины колонок заданы разными
- * процентами (на /privacy у колонки с кнопкой те же 65%, что у логотипа),
- * колонки растягивались на всю высоту шапки и прижимали содержимое к верху
- * бокса, а у обёртки кнопки был свой отступ сверху. Отдаём обе колонки под
- * содержимое, разводим по краям и ставим по верху.
- *
- * Верх бокса и верх самих букв — не одно и то же: разницу даёт половина
- * межстрочного интервала, а он у логотипа и у кнопки был разный. Поэтому
- * обоим задан одинаковый множитель 1.25, и тогда верхние края букв
- * совпадают. Межстрочный нужен именно на абзаце: высоту строки задаёт он, а
- * не вложенная ссылка. Заодно строки кнопки стали плотнее — было 1.7.
- */
 .guten-section.guten-pjtooW>.guten-container{
 	align-items:flex-start;
 	justify-content:space-between;
-	/* без этого на узких экранах кнопка не ужимается, а переносится на
-	   строку под логотип */
 	flex-wrap:nowrap;
 }
 .guten-column.guten-KITuQI,
@@ -367,22 +273,11 @@ body{--guten-base-color:#181d23;--guten-base-lighter-color:#2d3137;--guten-bg-co
 	padding-top:0;
 	padding-bottom:0;
 }
-/*
- * От 768px логотип набран 36px, а кнопка 15px: высота заглавных 25.8px
- * против 10.6px. При совпадающих верхних краях мелкий текст оптически
- * «висит» выше крупного, поэтому опускаем его на 6px — ближе к середине
- * заглавных логотипа, но не до полного центрирования.
- */
 @media (min-width:768px){
 	.guten-column.guten-e6S1EG>.guten-column-wrapper{
 		padding-top:6px;
 	}
 }
-/*
- * От 369 до 767px кнопка ещё умещается в одну строку, и тот же оптический
- * перекос заметен, хотя и слабее — логотип здесь 24px. Опускаем на 4px.
- * Ниже 369px кнопка переносится на две строки и сдвиг не нужен.
- */
 @media (min-width:369px) and (max-width:767px){
 	.guten-column.guten-e6S1EG>.guten-column-wrapper{
 		padding-top:4px;
@@ -396,20 +291,12 @@ body{--guten-base-color:#181d23;--guten-base-lighter-color:#2d3137;--guten-bg-co
 
 @media (max-width:767px){
 	.guten-column.guten-KITuQI p{
-		/* у .has-x-large-font-size размер объявлен через !important */
 		font-size:24px!important;
 		white-space:nowrap;
 	}
 }
 </style>
 <style id="site-logo-link-inline-css">
-/*
- * Логотип в шапке — ссылка на главную.
- *
- * В выгрузке «KL STUDIO» был просто текстом, кликнуть по нему было нельзя.
- * Обернули в ссылку на обеих страницах; здесь снимаем подчёркивание и
- * возвращаем наследуемый цвет, чтобы внешне ничего не поменялось.
- */
 .site-logo-link,
 .site-logo-link:hover,
 .site-logo-link:focus,
@@ -893,18 +780,6 @@ body{--guten-base-color:#181d23;--guten-base-lighter-color:#2d3137;--guten-bg-co
 <script id="gutenverse-frontend-event-js" src="../wp-content/plugins/gutenverse/lib/framework/assets/js/corefrontend.js"></script>
 <script data-wp-strategy="defer" defer id="gutenverse-core-frontend-animation-basic-script-js" src="../wp-content/plugins/gutenverse/lib/framework/assets/js/frontend/animation-basic.js"></script>
 <script id="current-year-inline-js">
-/*
- * Год в подвале.
- *
- * В выгрузке из WordPress год был вписан строкой: «KL Studio 2022-2025» и
- * «Copyright © 2025». Сайт статический, пересобирать его раз в год ради
- * двух цифр незачем, поэтому год проставляется при загрузке страницы.
- *
- * В разметке внутри .js-current-year лежит текущий год — он же остаётся
- * запасным значением, если JavaScript отключён. Скрипт стоит в конце body,
- * спаны к этому моменту уже разобраны, так что подмена происходит до
- * первой отрисовки и цифры не мигают.
- */
 (function () {
 	var year = String(new Date().getFullYear());
 	var nodes = document.querySelectorAll('.js-current-year');
