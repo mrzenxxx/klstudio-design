@@ -1065,13 +1065,13 @@ body{--guten-base-color:#181d23;--guten-base-lighter-color:#2d3137;--guten-bg-co
 <div class="wp-block-gutenverse-column guten-element guten-column guten-DO7JRC"><div class="guten-column-wrapper" data-id="DO7JRC">
 <div class="guten-element guten-wrap-helper no-margin guten-JBeHT0 flex"><div class="guten-inner-wrap" data-id="JBeHT0">
 <div class="guten-element gutenverse-text-editor guten-3pL0eV"><div class="text-content-inner">
-<p class="wp-block-paragraph">KL Studio 2022-2025</p>
+<p class="wp-block-paragraph">KL Studio 2022-<span class="js-current-year">2026</span></p>
 </div></div>
 
 
 
 <div class="guten-element gutenverse-text-editor guten-AXL1Oc"><div class="text-content-inner">
-<p class="wp-block-paragraph">Copyright © 2025. All rights reserved.</p>
+<p class="wp-block-paragraph">Copyright © <span class="js-current-year">2026</span>. All rights reserved.</p>
 </div></div>
 </div></div>
 </div></div>
@@ -1082,5 +1082,26 @@ body{--guten-base-color:#181d23;--guten-base-lighter-color:#2d3137;--guten-bg-co
 <script defer src="assets/js/contact-form.js?v=2"></script>
 <script data-wp-strategy="defer" defer id="gutenverse-frontend-gallery-script-js" src="wp-content/plugins/gutenverse/assets/js/frontend/gallery.js"></script>
 <script data-wp-strategy="defer" defer id="gutenverse-core-frontend-animation-basic-script-js" src="wp-content/plugins/gutenverse/lib/framework/assets/js/frontend/animation-basic.js"></script>
+<script id="current-year-inline-js">
+/*
+ * Год в подвале.
+ *
+ * В выгрузке из WordPress год был вписан строкой: «KL Studio 2022-2025» и
+ * «Copyright © 2025». Сайт статический, пересобирать его раз в год ради
+ * двух цифр незачем, поэтому год проставляется при загрузке страницы.
+ *
+ * В разметке внутри .js-current-year лежит текущий год — он же остаётся
+ * запасным значением, если JavaScript отключён. Скрипт стоит в конце body,
+ * спаны к этому моменту уже разобраны, так что подмена происходит до
+ * первой отрисовки и цифры не мигают.
+ */
+(function () {
+	var year = String(new Date().getFullYear());
+	var nodes = document.querySelectorAll('.js-current-year');
+	for (var i = 0; i < nodes.length; i++) {
+		nodes[i].textContent = year;
+	}
+})();
+</script>
 </body>
 </html>
