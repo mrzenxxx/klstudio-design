@@ -525,6 +525,23 @@ body{--guten-base-color:#181d23;--guten-base-lighter-color:#2d3137;--guten-bg-co
 }
 
 /*
+ * 4. Секция «Получить консультацию» в общую поправку не попала: её
+ *    контейнер ограничен только числом 1140px, без доли окна. На ширинах
+ *    примерно от 1025 до 1236px это число больше доступного места, поэтому
+ *    контейнер разворачивается во всю страницу и заголовок с формой
+ *    упираются в края экрана, тогда как шапка, первый экран и блок «Ваш
+ *    дом — Ваша опора» рядом держат свои 48px. Добавляем тот же запас на
+ *    96px, оставив секции её собственную ширину 1140px.
+ */
+@media (min-width:1025px){
+	.guten-section.guten-Wjdz8Z>.guten-container{
+		max-width:min(1140px,100% - 96px);
+		margin-left:auto;
+		margin-right:auto;
+	}
+}
+
+/*
  * Шапка: логотип слева, «Получить консультацию» справа, по верхнему краю букв.
  *
  * В выгрузке шапки двух страниц расходились: ширины колонок заданы разными
@@ -706,6 +723,61 @@ body{--guten-base-color:#181d23;--guten-base-lighter-color:#2d3137;--guten-bg-co
 		0 0 44px rgba(0,0,0,.28),
 		0 0 20px rgba(0,0,0,.19),
 		0 2px 5px rgba(0,0,0,.15)!important;
+}
+</style>
+<style id="contacts-subtitle-align-inline-css">
+/*
+ * Подзаголовок «Оставьте свой телефон и email…» в секции «Получить
+ * консультацию».
+ *
+ * В выгрузке у абзаца стоит класс has-text-align-center, хотя сам блок,
+ * заголовок и список контактов в этой колонке выровнены по левому краю.
+ * Блок занимает всю ширину колонки, поэтому центрирование внутри него
+ * отодвигало строку от общего края на десятки пикселей, и подзаголовок
+ * висел с отступом относительно заголовка и телефона.
+ *
+ * От 768px возвращаем абзацу выключку влево — он встаёт на ту же ось, что
+ * и остальные буквы колонки. Ниже 768px колонка центрируется целиком
+ * (см. contacts-mobile-align), поэтому там всё остаётся как было.
+ */
+@media (min-width:768px){
+	.guten-l0LmiB p.has-text-align-center{
+		text-align:left;
+	}
+	/*
+	 * Заодно убираем зазор под иконку в списке контактов. Font Awesome на
+	 * сайте не подключён, сами иконки нулевой ширины, но заложенный под них
+	 * gap в 7.5px всё равно сдвигал телефон, почту и город на 7.5px правее
+	 * заголовка — колонка читалась как два разных края. Ниже 768px тот же
+	 * зазор уже снят в contacts-mobile-align.
+	 */
+	.guten-Qu1I8r .guten-icon-list-item a,
+	.guten-Qu1I8r .list-wrapper .guten-icon-list-item a{
+		gap:0;
+	}
+}
+</style>
+<style id="gallery-spacing-inline-css">
+/*
+ * Вертикальные отступы галереи услуг.
+ *
+ * У секции «Наши услуги» на десктопе задан только верхний отступ в 100px,
+ * снизу его нет, а собственный отступ галереи — 16px. В сумме между
+ * описаниями услуг и строкой вкладок оставалось 26px: блоки и галерея
+ * читались как одно слипшееся полотно. Между самими вкладками и плиткой
+ * картинок было 20px — тоже слишком плотно для строки, по которой кликают.
+ *
+ * Даём галерее воздух сверху на десктопе (на планшете и телефоне секция
+ * выше уже закрывается своим отступом, там добавлять нечего) и во всех
+ * раскладках разводим вкладки и картинки.
+ */
+@media (min-width:1025px){
+	.guten-element.guten-xDBu89{
+		padding-top:64px;
+	}
+}
+.guten-xDBu89 .filter-controls ul{
+	margin-bottom:32px;
 }
 </style>
 </head>
@@ -900,7 +972,7 @@ body{--guten-base-color:#181d23;--guten-base-lighter-color:#2d3137;--guten-bg-co
 
 <div class="guten-element guten-icon-list-item guten-u2gNGH"><a id="guten-u2gNGH" href="mailto:info@klstudio.design"><i class="fas fa-envelope"></i><span class="list-text ">info@klstudio.design</span></a></div>
 
-<div class="guten-element guten-icon-list-item guten-erx3cA"><a id="guten-erx3cA"><i class="fas fa-map-marker-alt"></i><span class="list-text "> Санкт-Петербург, Россия</span></a></div>
+<div class="guten-element guten-icon-list-item guten-erx3cA"><a id="guten-erx3cA"><i class="fas fa-map-marker-alt"></i><span class="list-text ">Санкт-Петербург, Россия</span></a></div>
 </div></div></div></div>
 </div></div>
 
